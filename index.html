@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Una carta para ti ❤️</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para ti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('foto.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+
+    button:hover {
+      background-color: white;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
-<body style="background-color: #fff0f5; font-family: Georgia, serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: auto;">
-
-  <h1 style="text-align: center; color: #c71585;">Para ti, con todo mi cariño</h1>
-
-  <p>Hola amor,</p>
-
-  <p>
-    Quise escribirte esta carta para recordarte lo mucho que te amo y lo importante que eres para mí. A veces las palabras no bastan, pero esta es mi manera de hacerte sentir cerca, aunque estemos lejos.
-  </p>
-
-  <p>
-    Si tienes un momento tranquilo, <strong>quiero que escuches esto que grabé para ti</strong>. Cierra los ojos y déjate llevar por lo que siento.  
-  </p>
-
-  <p style="text-align: center; margin-top: 30px;">
-    👉 <a href="ParaTiMiVida.m4a" target="_blank" style="font-size: 18px; color: #dc143c;">Haz clic aquí para escuchar mi voz ❤️</a>
-  </p>
-
-  <p>
-    Te amo más de lo que las palabras pueden decir.  
-    <br><br>
-    Siempre tuyo,
-    <br>
-    <strong>Sebastián</strong>
-  </p>
-
+<body>
+  <audio id="audio" src="ParaTiMiVida.m4a" autoplay></audio>
+  <button onclick="document.getElementById('audio').play()">Reproducir de nuevo</button>
 </body>
 </html>
