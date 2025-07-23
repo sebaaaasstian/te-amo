@@ -3,45 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para ti</title>
+  <title>Para Ti 💙</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: url('foto.jpg') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1d3b; /* azul navy */
+      background-image: radial-gradient(#ffb6c1 1px, transparent 1px),
+                        radial-gradient(#ffb6c1 1px, transparent 1px);
+      background-position: 0 0, 25px 25px;
+      background-size: 50px 50px;
+      color: white;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       height: 100vh;
-      color: white;
-      text-shadow: 1px 1px 4px #000;
     }
 
-    button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: #000;
-      cursor: pointer;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    }
-
-    button:hover {
-      background-color: white;
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5em;
     }
 
     audio {
-      display: none;
+      margin: 20px auto;
+    }
+
+    button {
+      background-color: #ff69b4;
+      border: none;
+      padding: 12px 24px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
     }
   </style>
 </head>
 <body>
-  <audio id="audio" src="ParaTiMiVida.m4a" autoplay></audio>
-  <button onclick="document.getElementById('audio').play()">Reproducir de nuevo</button>
+  <h1>💌 Para ti, con mucho cariño</h1>
+  <audio id="audio" controls>
+    <source src="ParaTiMiVida.mp3.m4a" type="audio/mp4">
+    Tu navegador no soporta este formato de audio.
+  </audio>
+  <button onclick="document.getElementById('audio').currentTime = 0; document.getElementById('audio').play();">
+    Reproducir de nuevo
+  </button>
 </body>
 </html>
